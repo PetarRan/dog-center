@@ -72,8 +72,17 @@ Korisnik se na aplikaciju može prijaviti jedino ako je pre toga registrovan, u 
 
 Slika 4 –Registracija korisnika
 
-##
+```mermaid
+sequenceDiagram
+$WebPage ->> RegisterForm: <<user interaction>>
+$WebPage-->>RegisterForm: field input
+RegisterForm-->>Backend Logic: ?query to backend
+Backend Logic--x $WebPage : generateSID()
+Backend Logic-x RegisterForm: refresh(page)
+Note right of RegisterForm: Redirect to wanted page upon returning the response
 
+RegisterForm-->$WebPage : Redirect user...
+```
 
 ![](https://i.imgur.com/uTFDSET.png)
 
@@ -171,7 +180,7 @@ Slika 14 – Izmena imena i/ili prezimena
 
 Slika 15 – Promena šifre
 
-# 7Objekti
+# 7 Objekti
 
 Stranica posvećena objektima potrebnim vlasnicima pasa, kao što su Veterinari, PetShop-ovi, Hoteli za pse i Frizeri za pse, koji se mogu pronaći na mapi grada i kojima se mogu davati recenzije. Na dnu stranice nalaze se Pet Friendly objekti teritoriji grada Niša.
 
