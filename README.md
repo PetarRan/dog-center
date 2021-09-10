@@ -86,14 +86,14 @@ Korisnik se na aplikaciju može prijaviti jedino ako je pre toga registrovan, u 
 4. Nakon klika na dugme _Registruj se,_ korisnik biva registrovan na aplikaciju, a njegovi podaci pamte se u bazi podataka.
 5. Korisniku se potom otvara **WelcomeEmailSent.html** stranica, koja obaveštava korisnika da mu je na mail adresu stigao kofirmacioni mejl, kako bi potvrdio svoju registraciju.
 
-![](RackMultipart20210910-4-16mtxqi_html_19a618471a606a9.png)
+![](https://i.imgur.com/KVH3Bhr.png)
 
 Slika 4 –Registracija korisnika
 
 ##
 
 
-![](RackMultipart20210910-4-16mtxqi_html_cfc66fbe6f48510.png)
+![](https://i.imgur.com/uTFDSET.png)
 
 Slika 5 – Mejl dobrodošlice
 
@@ -105,7 +105,7 @@ Slika 5 – Mejl dobrodošlice
 4. U suprotnom, klikom na dugme _Prijavi se_, korisnik biva prijavljen na aplikaciju.
 5. Na ovoj stranici takođe postoji i opcija _Zaboravili ste šifru?_, na čiji klik se korisnik preusmerava na stranicu **Forgotpass.html.**
 
-![](RackMultipart20210910-4-16mtxqi_html_247b89bc9e21663c.png)
+![](https://i.imgur.com/UfOkPPU.png)
 
 Slika 6 – Prijava korisnika
 
@@ -115,7 +115,7 @@ Slika 6 – Prijava korisnika
 2. Na stranici se nalazi forma sa poljima za popunjavanje nove šifre (ona mora da sadrži bar jedan numerički karakter i bar po jedno malo i veliko slovo, a dužina mora biti najmanje 8 karaktera), kao i poljem za potvrdu šifre.
 3. Nakon popunjavanja ovih polja, klikom na dugme _Resetuj šifru_, korisnik dobija novu šifru kojom sada može da se prijavljuje na aplikaciju.
 
-![](RackMultipart20210910-4-16mtxqi_html_33254da87a7bb125.png)
+![](https://i.imgur.com/DUHujT0.png)
 
 Slika 7 – Korisnik koji je zaboravio šifru
 
@@ -128,7 +128,7 @@ Stranicaoglasipredviđenajeoglašavanjuljudikojinudenekuodponuđenihvrstauslugaz
 1. Korisnik bira željene tipove oglasa koje želi da mu se prikažu
 2. Odmah zatim, ispod se prikazuje lista oglasa željenog/željenih tipova, gde se za svaki oglas jasno vidi naslov oglasa, korisničko ime korisnika koji je postavio oglas, njegov kontakt telefon, opis oglasa, kao i datum postavljanja oglasa i datum poslednje izmene oglasa
 
-![](RackMultipart20210910-4-16mtxqi_html_4c6918dbf6c0658a.png)
+![](https://i.imgur.com/7MNY5nJ.png)
 
 Slika 8 – Oglasi
 
@@ -147,7 +147,7 @@ Na stranici Oglasi, klikom na dugme _Dodaj oglas +_, korisniku se prikazuje form
 3. Korisnik ima dva dugmeta i bira jedno, u zavisnosti od toga da li želi da postavi svoj oglas ili da odustane
 4. Korisnik koji kreira oglas, takođe ima i opciju za doniranje sredstava azilu Riska, klikom na dugme _Doniraj_, koje ga potom preusmerava na istoimeni web sajt
 
-![](RackMultipart20210910-4-16mtxqi_html_78f439278e9fdb04.png)
+![](https://i.imgur.com/Y7PqFW5.png)
 
 Slika 9 – Dodavanje oglasa
 
@@ -155,7 +155,7 @@ Slika 9 – Dodavanje oglasa
 
 Ukoliko autor oglasa poželi da izmeni svoj oglas, on to može lako uraditi koristeći formu namenjenu izmeni oglasa, tako što će uneti novi naziv oglasa, kontakt telefon i opis. Odabirom jednog od dva dugmeta, korisnik može izmeniti oglas ili odustati.
 
-![](RackMultipart20210910-4-16mtxqi_html_ffb9065c67fea87e.png)
+![](https://i.imgur.com/kRs9O91.png)
 
 Slika 10 – Izmena oglasa
 
@@ -167,7 +167,7 @@ Stranica saveti je stranica kojoj mogu da pristupe kako registrovani korisnici, 
 
 Prethodno registrovan, prijavljeni korisnik sa početne stranice – **Index.html** iz navigacionog bara, može pristupiti stranici **Profile.html.** Na ovoj stranici korisnik ima mogućnost da izmeni svoj avatar jednim od ponuđenih 8 avatara, da izmeni svoje podatke. Na stranici postoji odeljak _Moji oglasi_, gde se nalaze svi korisnici koje je taj korisnik prethodno postavio na aplikaciju, i odeljak _Sačuvano_, gde korisnik može dobiti uvid u objekte koje je sačuvao.
 
-![](RackMultipart20210910-4-16mtxqi_html_358c0713fd4b84a2.png)
+![](https://i.imgur.com/o8DZoDA.png)
 
 Slika 13 – Stranica moj profil
 
@@ -176,7 +176,7 @@ Slika 13 – Stranica moj profil
 1. Klikom na dugme _Izmeni profil_, korisnik dobija karticu na kojoj može da izmeni ime i prezime, popunjavajući istoimena polja za unos
 2. Odabirom jednog od dva ponuđena dugmeta, korisnik može da sačuva svoje nove podatke ili da odustane od izmene profila
 
-![](RackMultipart20210910-4-16mtxqi_html_1bc1dd3381128b66.png)
+![](https://i.imgur.com/QCwUDRY.png)
 
 Slika 14 – Izmena imena i/ili prezimena
 
@@ -185,7 +185,7 @@ Slika 14 – Izmena imena i/ili prezimena
 1. Klikom na dugme _Promeni šifru_, korisnik ima mogućnost izmene svoje šifre, tako što će u kartici koja se pojavila, popuniti polja stare šifre, nove šifre i ponovo uneti svoju šifru.
 2. Odabirom jednog od dva ponuđena dugmeta, korisnik može da sačuva svoju novu šifru ili da odustane od promene šifre
 
-![](RackMultipart20210910-4-16mtxqi_html_15cd5c9e30ff2101.png)
+![](https://i.imgur.com/ldHlupQ.png)
 
 Slika 15 – Promena šifre
 
@@ -197,7 +197,7 @@ Stranica posvećena objektima potrebnim vlasnicima pasa, kao što su Veterinari,
 
 Korisnik ima mogućnost da na mapi pronađe sve objekte određenog tipa na teritoriji grada, tako što će iz liste izabrati jedan od ponuđenih tipova, a zatim kliknuti na dugme _Pretraži._
 
-![](RackMultipart20210910-4-16mtxqi_html_52f9b592b092fe16.png)
+![](https://i.imgur.com/vli0OYX.png)
 
 Slika 16 – Pretraga prema tipu
 
@@ -211,7 +211,7 @@ Korisniku se nakon klika na dugme izlistavaju svi objekti odabranog tipa, gde sv
 2. Ako odluči da ostavi recenziju, korisnik u poljima za upis dodaje naslov svoje recenzije, samu recenziju kao i da oceni objekat vrednošću od 1 o 5.
 3. Odabirom jednog od dva ponuđena dugmeta, korisnik može postavi recenziju ili da od nje odustane.
 
-![](RackMultipart20210910-4-16mtxqi_html_a57cc40ffb8c2f00.png)
+![](https://i.imgur.com/dJiL5ol.png)
 
 Slika 17 – Ostavljanje recenzije
 
@@ -219,7 +219,7 @@ Slika 17 – Ostavljanje recenzije
 
 Greška 404 (error 404: Not Found) ukazuje na to da je korisnik uspeo da uspostavi vezu sa serverom ali server nije pronašao ono što je traženo. Korisnik ima mogućnost da se sa ove strane vrati na početnu stranu aplikacije.
 
-![](RackMultipart20210910-4-16mtxqi_html_af6f82c3f9673326.png)
+![](https://i.imgur.com/0Geu2Vw.png)
 
 Slika 18 – Stranica nije pronađena
 
@@ -227,6 +227,6 @@ Slika 18 – Stranica nije pronađena
 
 Ovoj stranici pristup ima isključivo administrator kada se prijavi na svoj nalog, i na taj način on uživa svoje privilegije.
 
-![](RackMultipart20210910-4-16mtxqi_html_9bdf18dc32231c47.png)
+![](https://i.imgur.com/USQCFmX.png)
 
 Slika 19 – Administratorov pregled aplikacije
