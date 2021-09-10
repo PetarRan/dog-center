@@ -1,5 +1,7 @@
 # **Dog.ly**
 
+[Mermaid](https://mermaidjs.github.io/)
+
 **Korisničko uputstvo**
 
 **Verzija 1.0**
