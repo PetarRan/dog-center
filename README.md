@@ -1,4 +1,4 @@
-# **Dogly**
+# **Dog.ly**
 
 **Korisničko uputstvo**
 
@@ -66,27 +66,15 @@ Primarni cilj Dogly aplikacije je da objedini sve potrebe jednog prosečnog vlas
 #
 
 
-# 2Početna stranica aplikacije
+# 2 Početna stranica aplikacije
 
 Početna stranica aplikacije izgleda kao na sledećoj slici:
 
-![](RackMultipart20210910-4-16mtxqi_html_cb3858d6755239f1.png)
+![](https://i.imgur.com/sMsIMxJ.png)
 
 Slika 1 – Početna stranica aplikacije
 
-## 2.1 Kviz – odaberite pravu rasu
-
-Korisniku će se, dok se nalazi na početnoj stranici, vremenom pojaviti pop – up window da može uraditi kviz i odabrati pravu rasu psa za sebe.
-
-![](RackMultipart20210910-4-16mtxqi_html_41e46f38747330e0.png)
-
-Slika 2 – Kviz
-
-![](RackMultipart20210910-4-16mtxqi_html_ed1426355f1076e6.png)
-
-Slika 3 – Odaberite pravog psa za sebe
-
-# 3Prijavljivanje korisnika na aplikaciju
+# 3 Prijavljivanje korisnika na aplikaciju
 
 Korisnik se na aplikaciju može prijaviti jedino ako je pre toga registrovan, u suprotnom korisnik se vodi kao posetilac aplikacije. U tom slučaju, on ima pristup pregledu osnovnih podataka o aplikaciji (početna stranica) i savetima, tačnije domen njegovih mogućnosti u tom slučaju je ograničen.
 
@@ -109,7 +97,7 @@ Slika 4 –Registracija korisnika
 
 Slika 5 – Mejl dobrodošlice
 
-## 3.2Prijava prethodno registrovanog korisnika
+## 3.2 Prijava prethodno registrovanog korisnika
 
 1. Korisnik sa početne stranice može da odabere u navigacionom baru opciju Prijava, nakon čega se on preusmerava na stranicu predviđenu prijavljivanju - **Login.html.** Stranica je na srpskom jeziku, ali korisnik ima mogućnost da odabere engleski jezik, pri čemu se ceo sadržaj stranice prevodi.
 2. Na ovoj stranici nalazi se forma sa poljima za e-mail adresu i šifru, koja korisnik treba da popuni kako bi se prijavio na aplikaciju.
@@ -131,7 +119,7 @@ Slika 6 – Prijava korisnika
 
 Slika 7 – Korisnik koji je zaboravio šifru
 
-# 4Oglasi
+# 4 Oglasi
 
 Stranicaoglasipredviđenajeoglašavanjuljudikojinudenekuodponuđenihvrstauslugazapse – šetanje, šišanje, usvajanje, čuvanje, parenje, prodajuili dresuru. Na stranici se nalaze i hitni oglasi, koje postavljaju vlasnici pasa u slučaju da se njihov ljubimac izgubi.
 
@@ -171,24 +159,11 @@ Ukoliko autor oglasa poželi da izmeni svoj oglas, on to može lako uraditi kori
 
 Slika 10 – Izmena oglasa
 
-# 5Saveti
+# 5 Saveti
 
 Stranica saveti je stranica kojoj mogu da pristupe kako registrovani korisnici, tako i posetioci aplikacije. Na ovoj stranici nalazi se odeljak Najčešće rase, gde korisnik može da se informiše o osobinama i karakteristika nekih najčešćih rasa pasa na našim prostorima, i odeljak Dresura, sa nekim osnovnim komandama i instrukcijama koje pas može da nauči
 
-![](RackMultipart20210910-4-16mtxqi_html_1ff9bc4c93100584.png)
-
-Slika 11 – Saveti
-
-## 5.1 Pregled komandi dresure
-
-1. Klikom na bilo koju od komandi, otvara se modal sa savetima kako da pas nauči i usvoji neku od komandi _Sedi, Lezi, Daj šapu, Ustani._
-2. Na dnu se nalazi dugme _Pogledajte sledeću komandu_, na čiji klik se korisniku otvara modal za sledeću komandu
-
-![](RackMultipart20210910-4-16mtxqi_html_251d514c42319786.png)
-
-Slika 12 – Pregled komandi
-
-# 6Moj Profil
+# 6 Moj Profil
 
 Prethodno registrovan, prijavljeni korisnik sa početne stranice – **Index.html** iz navigacionog bara, može pristupiti stranici **Profile.html.** Na ovoj stranici korisnik ima mogućnost da izmeni svoj avatar jednim od ponuđenih 8 avatara, da izmeni svoje podatke. Na stranici postoji odeljak _Moji oglasi_, gde se nalaze svi korisnici koje je taj korisnik prethodno postavio na aplikaciju, i odeljak _Sačuvano_, gde korisnik može dobiti uvid u objekte koje je sačuvao.
 
