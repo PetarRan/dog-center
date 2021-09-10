@@ -12,47 +12,29 @@
 
 # **Sadržaj**
 
-[1.Uvod 4]
+ - 1.Uvod 
+ - 2.Početna stranica aplikacije 
+ - 2.1 Kviz – odaberite pravu rasu 
+ - 3.Prijavljivanje korisnika na aplikaciju 
+ - 3.1Registracija novog korisnika 
+ - 3.2Prijava prethodno registrovanog korisnika 
+ - 3.3 U slučaju da je prethodno registrovan korisnik zaboravio šifru 
+ - 4.Oglasi 
+ - 4.1 Filtriranje oglasa po tipu 
+ - 4.2 Dodavanje novog oglasa 
+ - 4.3 Izmena oglasa 
+ - 5.Saveti 
+ - 5.1 Pregled komandi dresure 
+ - 6.Moj Profil 
+ - 6.1Izmena profila 
+ - 6.2Promena šifre 
+ - 7.Objekti 
+ - 7.1Pretraga objekata prema tipu 
+ - 7.2 Ostavljanje recenzije 
+ - 8.Stranica 404
+ - 9.Admin stranica
 
-[2.Početna stranica aplikacije 5]
-
-[2.1 Kviz – odaberite pravu rasu 6]
-
-[3.Prijavljivanje korisnika na aplikaciju 6]
-
-[3.1Registracija novog korisnika 7]
-
-[3.2Prijava prethodno registrovanog korisnika 8]
-
-[3.3 U slučaju da je prethodno registrovan korisnik zaboravio šifru 9]
-
-[4.Oglasi 10]
-
-[4.1 Filtriranje oglasa po tipu 10]
-
-[4.2 Dodavanje novog oglasa 10]
-
-[4.3 Izmena oglasa 11]
-
-[5.Saveti 12]
-
-[5.1 Pregled komandi dresure 13]
-
-[6.Moj Profil 13]
-
-[6.1Izmena profila 14]
-
-[6.2Promena šifre 15]
-
-[7.Objekti 15]
-
-[7.1Pretraga objekata prema tipu 15]
-
-[7.2 Ostavljanje recenzije 17]
-
-[8.Stranica 404 18]
-
-[9.Admin stranica 18]
+> **Note:** Ovaj **Sadrzaj** nije interaktivnog tipa.
 
 **Korisničko uputstvo za Dogly aplikaciju**
 
