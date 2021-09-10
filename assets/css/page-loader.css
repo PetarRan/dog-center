@@ -1,0 +1,17 @@
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+}
+
+#loading-image {
+  position:-ms-page;
+  z-index: 100;
+  margin: 0;
+}

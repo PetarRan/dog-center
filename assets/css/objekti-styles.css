@@ -1,0 +1,85 @@
+.bg-custom {
+  background: url("../../assets/img/background-dogly-objekti.png") center / cover;
+}
+
+@media (min-width: 1201px) {
+  .bg-custom {
+    background: url("../../assets/img/background-dogly-objekti.png") top / cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-custom {
+    background: url("../../assets/img/background-dogly-objekti.png") left / cover;
+  }
+}
+
+.map-section{
+  padding: 2vh;
+  background-image: url(/assets/img/banner-map.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+.map-section iframe{
+  height: 55vh;
+  box-shadow: 5px 9px 7px 8px #888888;
+}
+
+.header-map{
+  padding: 1rem;
+}
+
+.icons i{
+  -webkit-text-fill-color: rgb(255, 238, 0);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+
+}
+
+.card-style-custom{
+  padding: 5ren;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.596);
+}
+
+#location-marker{
+  -webkit-text-fill-color: rgb(255, 0, 0);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.pet-friendly-cafe{
+  background: url(/assets/img/banner-cafe-objekti.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul{
+  list-style-type:none;
+}
+
+.list-wrapper {
+	padding: 15px;
+	overflow: hidden;
+}
+
+.list-item {
+	border: 1px solid #EEE;
+	background: #FFF;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+.list-item h4 {
+	color: #FF7182;
+	font-size: 18px;
+	margin: 0 0 5px;	
+}
+
+.list-item p {
+	margin: 0;
+}

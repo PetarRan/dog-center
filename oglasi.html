@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Oglasi - Dogly</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap1/css/bootstrap.min.css">
+   
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Multi-Select-Dropdown-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/oglas-styles.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/user-modal.css">
+    <link rel="stylesheet" href="/assets/css/page-loader.css">
+</head>
+
+<body style="font-family: Catamaran;" >
+    <div class="se-pre-con"></div>
+
+    <div id="loading">
+        <img id="loading-image" src="assets/img/dogly-loader.gif" alt="Loading..." />
+    </div>
+
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom notranslate">
+        <div class="container"><a class="navbar-brand" href="index.html"><img width="130" height="30"src="assets/img/x.png"></img></a><button data-bs-toggle="collapse"
+                class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link proflang" href="javascript:void(0)" onclick="location.href='profile.html'">Moj Profil <i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link logoutlang" onclick="logout()" href="index.html" >Odjavi me <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle servlang" href="#" data-bs-toggle="dropdown"> Usluge <i
+                                class="fas fa-plus"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items">
+                            <li><a class="dropdown-item text-white-50 savlang redirekcija" href="saveti.html"> <i
+                                        class="fas fa-hand-holding-heart icon redirekcija"></i> Saveti </a></li>
+                            <li><a class="dropdown-item text-white-50 addlang redirekcija" href="oglasi.html"> <i class="fa fa-bullhorn icon"></i>
+                                    Oglasi </a></li>
+                            <li><a class="dropdown-item text-white-50 objlang redirekcija" href="objekti.html"> <i class="fas fa-building icon"></i>
+                                    Objekti </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle lglang" href="#" data-bs-toggle="dropdown"> Jezik <i
+                                class="fas fa-language"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items langWrap">
+                            <li class="langWrapli  activee"  language="srpski"><a class="dropdown-item text-white-50 sropt" href="#" ><i class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+                            <li class="langWrapli"  language="english"><a class="dropdown-item text-white-50 enopt" href="#" ><i class="flag-icon flag-icon-usa"></i> English</a></li>
+                           
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center text-white masthead bg-custom notranslate">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto position-relative ">
+                    <h1 class="mb-5 ogl">Oglasi u vasoj okolini!</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="oglas-banner" class="mt-2 mb-3 p-4 bg-custom-2 notranslate">
+        <div class="container border b-radius p-3 bg-white">
+            <div class="row">
+                <div class="col-8 ">
+                    <h3 class="ti">Odaberite tip oglasa!</h3>
+                </div>
+                <div class="col-4 text-end"><button id="novi-oglas-dugme" class="btn btn-success doda"><span>Dodaj oglas
+                            &nbsp;<i class="fas fa-plus"></i></span></button></div>
+            </div>
+            <hr>
+            <ul id="filter-options" >
+                <li><input type="radio"  name= "rb"value="filter_setnja" data-filter_id="setanje" class="set" checked> Šetanje</li>
+                <li><input type="radio" name= "rb" value="filter_sisanje" data-filter_id="sisanje" class="sis"> Šišanje</li>
+                <li><input type="radio" name= "rb" value="filter_usvajanje" data-filter_id="usvajanje" class="usv"> Usvajanje</li>
+                <li><input type="radio" name= "rb" value="filter_cuvanje" data-filter_id="cuvanje" class="cuv"> Čuvanje</li>
+                <li><input type="radio" name= "rb" value="filter_parenje" data-filter_id="parenje"class="par"> Parenje</li>
+                <li><input type="radio"name= "rb"  value="filter_prodaja" data-filter_id="prodaja" class="pro"> Prodaja</li>
+                <li><input type="radio" name= "rb" value="filter_dresura" data-filter_id="dresura" class="dre"> Dresura</li>
+                <li><input type="radio"  name= "rb" value="filter_hitno" data-filter_id="hitno" class="hit"> Hitno!</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container border b-radius p-3 bg-light notranslate" id="forma-novi-oglas">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3">
+                <form class="form-horizontal needs-validation">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend class="nov">Novi oglas</legend>
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-6 control-label ti1" for="selectbasic">Tip oglasa:</label>
+                            <div class="col-md-6">
+                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                    <option value="filter_setanje"class="set">Šetanje</option>
+                                    <option value="filter_sisanje"class="sis">Šišanje</option>
+                                    <option value="filter_usvajanje"class="usv">Usvajanje</option>
+                                    <option value="filter_cuvanje"class="cuv">Čuvanje</option>
+                                    <option value="filter_parenje"class="par">Parenje</option>
+                                    <option value="filter_prodaja" class="pro">Prodaja</option>
+                                    <option value="filter_dresura" class="dre">Dresura</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label id="naslov-lab" class="col-md-9 control-label nasl" for="textinput">* Naslov Oglasa:</label>
+                            <div class="col-md-9">
+                                <input id="textinput" name="textinput" type="text" placeholder="Title"
+                                    class="form-control input-md">
+                            </div>
+
+
+                            <!-- Multiple Radios (inline) -->
+
+                            <label class="col-md-6 control-label hit1" for="radios">Hitan Oglas?</label>
+                            <div class="col-md-6">
+                                <label class="radio-inline y" for="radios-0">
+                                    <input type="radio" name="radios" id="radios-0" value="1">
+                                    Da
+                                </label>
+                                <label class="radio-inline n" for="radios-1">
+                                    <input type="radio" name="radios" id="radios-1" value="2" checked="checked">
+                                    Ne
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-9 control-label op" for="textarea">Opis:</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="textarea" name="textarea"
+                                    placeholder="..."></textarea>
+                            </div>
+                        </div>
+                        <!-- BrojTelefona -->
+                        <div class="form-group">
+                            <label id="naslov-lab" class="col-md-3 control-label nasl" for="textinput">* Broj telefona:</label>
+                            <div class="col-md-6">
+                                <input id="textinputNumber" name="textinputNumber" type="text" placeholder="+043948355"
+                                    class="form-control input-md">
+                            </div>
+                        <!-- Button (Double) -->
+                        <div class="form-group">
+                            <label class="col-md-6 control-label" for="button1id"></label>
+                            <div class="col-md-8">
+                                <button id="button1id" type="submit" name="button1id" class="btn btn-success m-2"><i
+                                        class="fas fa-check"></i></button>
+                                <button id="button2id" name="button2id" class="btn btn-danger m-2"><i
+                                        class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div
+                class="col-xs-12 col-sm-12 col-md-8 col-lg-6  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3 text-center bg-custom-3 ">
+                <div><a target="_blank" href="https://www.animalhope.org.rs/donacije.html"
+                        class="btn btn-success rounded doni"> Doniraj </a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="load-oglas" class="alert container text-center alert-success notranslate" role="alert">
+        <div class="spinner-grow" role="status"></div> <span class="h5 ogpos"> Oglas se postavlja... </span>
+    </div>
+    <div id="confirm-oglas" class="alert container text-center alert-success notranslate" role="alert">
+        <i class="fas fa-check"></i> <span class="h5 ogpos1"> Oglas uspesno postavljen! </span>
+    </div>
+
+    <div class="container list-wrapper" id="oglasi">
+        <a type="" class="btn btn-white" id="google_translate_element"></a>
+        <ul id="product-list">
+        </ul>
+        <ul class="pagination nijenacrtan"> 
+
+        </ul>
+    
+    </div>
+
+    <footer class="footer-dark notranslate">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="usl">Usluge</h3>
+                    <ul>
+                        <li><a href="saveti.html" class="sav redirekcija">Saveti</a></li>
+                        <li><a href="oglasi.html" class="ogl redirekcija">Oglasi</a></li>
+                        <li><a href="objekti.html" class="obj redirekcija">Objekti</a></li>
+						<li><a href="quiz.html" class="kvi redirekcija">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="onam">O nama</h3>
+                    <ul>
+                        <li><a data-toggle="modal" href="#" data-target="#teamRegex">Team Regex</a></li>
+                        <li><a href="#">Dogly</a></li>
+                        <li><a href="mailto:doglydogly7@gmail.com" class="konta">Kontaktirajte nas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Dogly</h3>
+                    <p class="opis1">Idealno mesto za vlasnike pasa koje kombinuje svakodnevne potrebe vašeg najboljeg prijatelja sa
+                        progresivnom web aplikacijom u modernom stilu - user-friendly interfjes, čini od korišćenja naše
+                        aplikacije
+                        jedan potpuni užitak!
+                    </p>
+                </div>
+                <div class="col item social">
+                    <a href="mailto:doglydogly7@gmail.com"><i class="icon ion-social-google"></i></a>
+                </div>
+                <p class="copyright">Regex&nbsp; © 2021</p>
+            </div>
+    </footer>
+        <!-- MODALS! -->
+        <div class= "modcont">
+          
+        </div>
+
+    <!-- MODAL TEAM REGEX -->
+
+    <div class="modal fade" id="teamRegex" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="staticBackdropLabel"
+                        class="text-uppercase text-letter-spacing-xs my-0 text-dark font-weight-bold">
+                        Team <code>REGEX</code> <i class="ion-ios-body pl-1 text-primary op-8 z-index-1 text-dark"></i>
+                    </h4>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container py-7">
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_a.jpg" alt="Personal Trainer 1"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Anđela Kostić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Team Leader</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>Backend development i inženjer sistema i baze podataka aplikacije <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/endzi_ko_/?hl=en" data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i> </a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_k.jpg" alt="Personal Trainer 2"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Aleksa Krstić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>FrontEnd development aplikacije <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/krrle/?hl=en" data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_p.jpg" alt="Personal Trainer 3"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Petar Ranđelović
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>FrontEnd development i agile Trello board SCRUM master aplikacije <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.linkedin.com/in/petar-randjelovic-3518511b4/" data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="icon ion-social-linkedin h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_n.jpg" alt="Personal Trainer 4"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Nina Milenković
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Database Systems</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>Inženjer sistema i baze podataka za aplikaciju <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/ninaaaami/?hl=en" data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="favorites-confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header alert-success">
+                  <div>
+                      <h5>Oglas sacuvan <i class="fas fa-check"></i></h5>
+                  </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        </div>
+      </div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.simplePagination.js"></script>
+    
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap1/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/scripts/pagination-script.js"></script>
+    <script src="assets/scripts/emergency-oglas.js"></script>
+    <script src="assets/scripts/filter-script.js"></script>
+    <script src="assets/scripts/new-form.js"></script>
+    <script src="assets/scripts/hitno.js"></script>
+	<script src="https://use.fontawesome.com/376fe0a5b4.js"></script>
+    <script src="assets/js/lang/fut-lang.js"></script>
+    <script src="assets/js/oglasi.js"></script>
+    <script src="assets/scripts/page-loader.js"></script>
+    <script src="assets/scripts/translator-api-goolge.js"></script>
+    
+    <script src="assets/js/lang/indus-lang.js"></script>
+    <script src="assets/js/lang/oglas-lang.js"></script>
+    <script src="assets/js/oglasi-load.js"></script>
+    <script src="assets/general.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateFunction"></script>
+</body>
+
+</html>

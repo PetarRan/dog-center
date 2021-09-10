@@ -1,0 +1,30 @@
+uradi fju da se proverava token ako postoji i ako je user ulogovan da se vrati na index-user a ako nije da se vrati na index html
+
+-korisnk udje na index -> provera tokena 
+1. postoji token cita se lang za user-a i sve se stavlja na taj lang 
+	-provera da li je validan? 
+		1.jeste validan - redirekt na index-user.html?enkripcija(email)
+		(sve info posle nabavim iz enkripcije)
+		
+		2. nije validan (nista) - ostaje tu ako klikne register i proba da se reg sa istim emailom ne moze
+					-ako klikne login loginuje se, ispravi se datum u tokenu (nova sesija)
+2.ne postoji token nista se ne desava ako proba login kazi da nije registrovan acc 
+
+kada korisnik klikne na logout tooken treba da se setuje da bude na expired day. 
+
+
+
+Imam ideju da kad se postavi Hitan oglas da se svim userima promeni neki fleg npr boja kao crvena siva za zvonce ili kao da se promeni ikona 
+Obezbedi da username vec postoji u bazi upozorenje
+
+moze li mail za forgot pass da bude link ?
+
+acc confirm? ne moze log in ako nije potvrdio acc, mora da se potvrdi ! 
+
+
+
+
+
+
+
+	 

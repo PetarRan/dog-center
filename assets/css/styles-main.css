@@ -1,0 +1,92 @@
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, #38b6ff 0%, #4f98ee 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.masthead .bg-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(0deg, #0019ff 0%, #0193a7 100%);
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  color: #fff;
+  background-color: #0898d6 !important;
+  border-color: #0898d0 !important;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  color: #fff;
+  background-color: #0898d6 !important;
+  border-color: #0898d6 !important;
+}
+
+.btn-primary {
+  background-color: #085ad600 !important;
+  border-color: #0898d600 !important;
+  font-size: x-large;
+  font-family: "Catamaran";
+}
+
+#carousel-1 .carousel-inner{
+  max-height: 30rem;
+}
+
+#carousel-1 .carousel-item{
+  align-items: center;
+  max-height: 30rem;
+}
+
+.background-custom{
+  background-image: url("../../assets/img/banner.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  padding:35vh;
+  background-position: center;
+}
+.background-customen{
+  background-image: url("../../assets/img/Slike - EN/banner-en.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  padding:35vh;
+  background-position: center;
+}
+.class-brand{
+  text-decoration: none;
+  font-family: "Catamaran";
+}
+
+#carousel-2 .carousel-inner{
+  max-height: 30rem;
+}
+
+#carousel-2 .carousel-item{
+  align-items: center;
+  max-height: 30rem;
+}
+
+
+@media (max-width: 1199px){
+  .background-custom{
+    background-image: url("../../assets/img/banner-small.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding:35vh;
+    background-position: center;
+  }
+  .background-customen{
+    background-image: url("../../assets/img/Slike - EN/banner-small-en.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding:35vh;
+    background-position: center;
+  }
+}

@@ -1,0 +1,311 @@
+6<!DOCTYPE html>
+<html style="font-family: Catamaran, sans-serif;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Quiz!</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+    <link rel="stylesheet" href="/assets/css/quiz-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/page-loader.css">
+</head>
+
+<body>
+    <ul class="dropdown-menu bg-dark li-items langWrap" style="display: none;">
+        <li class="langWrapli" language='srpski'><a
+                class="dropdown-item text-white-50 sropt" href="#"><i
+                    class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+        <li class="langWrapli activee" language='english'><a class="dropdown-item text-white-50 enopt"
+                href="#"><i class="flag-icon flag-icon-usa"></i> English</a></li>
+
+    </ul>
+
+    <div id="loading">
+        <img id="loading-image" src="assets/img/dogly-loader.gif" alt="Loading..." />
+    </div>
+
+    <section class="contact-clean">
+
+        <div id="question1" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq naziv">
+                                <h4 class="naslov">Quiz - What's a Perferct Dog For You?</h4><span id="question">(1 / 5)</span>
+                            </div>
+                        </div>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ml-2 rad-text text-dark zivis">Do you live in an apartment or a house?</h5>
+                            </div>
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad1">
+                                <div class="rad-design"></div>
+                                <div class="rad-text ku">House</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad1">
+                                <div class="rad-design"></div>
+                                <div class="rad-text st">Apartment</div>
+                            </label>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
+                                id="prev1" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                                    class="fa fa-home p-2"></i></button><button id="next1"
+                                class="btn btn-primary border-success align-items-center btn-success" type="button"><i
+                                    class="fa fa-arrow-right p-2"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="question2" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq naziv">
+                                <h4>Quiz - What's a Perferct Dog For You?</h4><span id="question">(2 / 5)</span>
+                            </div>
+                        </div>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ml-2 rad-text text-dark akt">Would you say you are an active person?</h5>
+                            </div>
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad2">
+                                <div class="rad-design"></div>
+                                <div class="rad-text vrces">Very Active</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad2">
+                                <div class="rad-design"></div>
+                                <div class="rad-text ces">Moderately Active</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad2">
+                                <div class="rad-design"></div>
+                                <div class="rad-text ret">Not Quite Active</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad2">
+                                <div class="rad-design"></div>
+                                <div class="rad-text vrret">I barely move</div>
+                            </label>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
+                                id="prev2" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                                    class="fa fa-arrow-left p-2"></i></button><button id="next2"
+                                class="btn btn-primary border-success align-items-center btn-success" type="button"><i
+                                    class="fa fa-arrow-right p-2"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="question3" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq naziv">
+                                <h4>Dogly quiz - pas za tebe!</h4><span id="question">(3 / 5)</span>
+                            </div>
+                        </div>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ml-2 rad-text text-dark dec">Da li imate decu?</h5>
+                            </div>
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad3">
+                                <div class="rad-design"></div>
+                                <div class="rad-text y">Da</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad3">
+                                <div class="rad-design"></div>
+                                <div class="rad-text n">Ne</div>
+                            </label>
+
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
+                                id="prev3" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                                    class="fa fa-arrow-left p-2"></i></button><button id="next3"
+                                class="btn btn-primary border-success align-items-center btn-success" type="button"><i
+                                    class="fa fa-arrow-right p-2"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="question4" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq naziv">
+                                <h4>Dogly quiz - pas za tebe!</h4><span id="question">(4 / 5)</span>
+                            </div>
+                        </div>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ml-2 rad-text text-dark jos">Da li imate jos nekog kucnog ljubimca?</h5>
+                            </div>
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad4">
+                                <div class="rad-design"></div>
+                                <div class="rad-text y1">Da, jos jednog.</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad4">
+                                <div class="rad-design"></div>
+                                <div class="rad-text y2">Da, vise od jednog.</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad4">
+                                <div class="rad-design"></div>
+                                <div class="rad-text n2">Ne</div>
+                            </label>
+
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
+                                id="prev4" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                                    class="fa fa-arrow-left p-2"></i></button><button id="next4"
+                                class="btn btn-primary border-success align-items-center btn-success" type="button"><i
+                                    class="fa fa-arrow-right p-2"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="question5" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq naziv">
+                                <h4>Dogly quiz - pas za tebe!</h4><span id="question">(5 / 5)</span>
+                            </div>
+                        </div>
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.</h3>
+                                <h5 class="mt-1 ml-2 rad-text text-dark slvr">Gde provodite slobodno vreme?</h5>
+                            </div>
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad5">
+                                <div class="rad-design"></div>
+                                <div class="rad-text his">Hiking i Sport</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad5">
+                                <div class="rad-design"></div>
+                                <div class="rad-text netf">Kod Kuce uz Netflix</div>
+                            </label>
+
+                            <label class="rad-label">
+                                <input type="radio" class="rad-input" name="rad5">
+                                <div class="rad-design"></div>
+                                <div class="rad-text baz">Na Bazenu ili Moru</div>
+                            </label>
+
+                        </div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button
+                                id="prev5" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i
+                                    class="fa fa-arrow-left p-2"></i></button><button id="next5"
+                                class="btn btn-primary border-success align-items-center btn-success" type="button"><i
+                                    class="fa fa-arrow-right p-2"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="endquiz" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="flex-row justify-content-between text-center mcq pret">
+                                <h4>Potraga u toku . . .&nbsp;
+                                </h4><span id="question"></span>
+                            </div>
+                        </div>
+                        <div class="question text-center bg-white p-3 border-bottom">
+                            <h1 id="naziv-psa">
+                                <div class="spinner-grow text-primary " role="status">
+                                </div>
+                            </h1>
+                            <h2 id="slika-psa">
+
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quizresult" class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="flex-row justify-content-between text-center mcq">
+                                <h4>Pas za vas je:&nbsp;
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="question text-center bg-white p-3 border-bottom">
+                            <h1 id="dogNaziv">
+                            </h1>
+                            <div class="container w-300">
+                                <img id="dogSlika">
+                                </img>
+                            </div>
+                            
+                        </div>
+                        <div class="flex-row justify-content-between d-flex p-3 bg-white text-center"><button id="home1"
+                                class="btn btn-primary align-items-center btn-danger" type="button"><i
+                                    class="fa fa-home p-2"></i></button><button id="again"
+                                class="btn btn-primary align-items-center btn-danger" type="button"><i
+                                    class="fa fa-repeat p-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src ="assets/js/lang/kvizlang.js"></script>
+    
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/quiz-answer-handling.js"></script>
+    <script src="assets/scripts/page-loader.js"></script>
+   <script src="assets/general.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.css">
+    <link rel="stylesheet" href="assets/css/login-reg.css">
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+</head>
+
+<body class="bg-gradient-primary"  >
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image"
+                                    style="background-image: url(&quot;assets/img/dogs/1.png&quot;);"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4 welcomelang" id="welcomelang">Dobrodošli nazad!</h4>
+                                    </div>
+                                    <form class="user needs-validation" novalidate>
+
+                                        <div class="text-danger small" id= "TryRegister"></div>
+                                        <div class="form-group"><input class="form-control form-control-user emaillang"
+                                                type="email" id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Email Adresa" name="email" required>
+                                            <div class="invalid-feedback infbemail">Molimo Vas, unesite validnu e-mail
+                                                adresu!</div> 
+                                                <div class="invalid-feedback infbemaildva"></div>
+                                        </div>
+                                        <div class="form-group"><input
+                                                class="form-control form-control-user lozinkalang" type="password"
+                                                id="exampleInputPassword" placeholder="Šifra" name="password" required>
+                                            <div class="invalid-feedback infbpass">Pogrešna šifra!</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+
+                                            </div><button class="btn btn-primary btn-block text-white btn-user loglang"
+                                                type="submit"><i class="fas fa-user"></i>&nbsp; Prijavi se</button>
+                                            <hr><a
+                                                class="btn btn-primary btn-block text-white btn-primary btn-user redirekcija"
+                                                method="post" action="CheckEmail" id="reglang" role="button"
+                                                type="submit" href="register.html"><i class="fas fa-user-plus"></i>&nbsp; Registruj se</a>
+                                        </div>
+
+
+                                    </form>
+                                    <div class="text-center"><a class="small redirekcija" id="forgottenpass"
+                                            href="forgott-password.html">Zaboravili ste Šifru?</a>
+                                    </div>
+
+                                        <div class="nav-item dropdown language">
+                                            <a class="nav-link  dropdown-toggle lglang" href="#"
+                                                data-bs-toggle="dropdown">
+                                                Jezik <i class="fas fa-language"></i> </a>
+                                            <ul class="dropdown-menu bg-primary li-items langWrap">
+                                                <li class="langWrapli  activee" language='srpski'><a
+                                                        class="dropdown-item text-white-50 sropt" ><i
+                                                            class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+                                                <li class="langWrapli" language='english'><a
+                                                        class="dropdown-item text-white-50 enopt" ><i
+                                                            class="flag-icon flag-icon-usa"></i> English</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap1/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+     <script src="assets/js/lang/log-lang.js"></script> 
+     
+    <script  src="assets/js/login.js"></script>
+    <script  src="assets/general.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    
+
+</body>
+
+</html>

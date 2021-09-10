@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profile - Dogly</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.css">
+    <link rel="stylesheet" href="assets/css/page-loader.css">
+</head>
+
+<body id="page-top " >
+
+    <div id="loading">
+        <img id="loading-image" src="assets/img/dogly-loader.gif" alt="Loading..." />
+    </div>
+
+    <div class="se-pre-con "></div>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom fixed-top">
+        <div class="container"><a class="navbar-brand" href="index.html"><img width="130" height="30"src="assets/img/x.png"></img></a><button data-bs-toggle="collapse"
+                class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link proflang redirekcija" href="javascript:void(0)"
+                           href='profile.html'>Moj Profil <i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link logoutlang" onclick="logout()" href="#">Odjavi me
+                            <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle servlang" href="#" data-bs-toggle="dropdown"> Usluge <i
+                                class="fas fa-plus"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items">
+                            <li><a class="dropdown-item text-white-50 savlang redirekcija" href="saveti.html"> <i
+                                        class="fas fa-hand-holding-heart icon"></i> Saveti </a></li>
+                            <li><a class="dropdown-item text-white-50 addlang redirekcija" href="oglasi.html"> <i
+                                        class="fa fa-bullhorn icon"></i>
+                                    Oglasi </a></li>
+                            <li><a class="dropdown-item text-white-50 objlang redirekcija" href="objekti.html"> <i
+                                        class="fas fa-building icon"></i>
+                                    Objekti </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle lglang" href="#" data-bs-toggle="dropdown"> Jezik <i
+                                class="fas fa-language"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items langWrap">
+                            <li class="langWrapli  activee" language='srpski'><a
+                                    class="dropdown-item text-white-50 sropt" href="#"><i
+                                        class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+                            <li class="langWrapli" language='english'><a class="dropdown-item text-white-50 enopt"
+                                    href="#"><i class="flag-icon flag-icon-usa"></i> English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <div class="d-flex flex-column " id="content-wrapper">
+            <div id="content" class="p-3">
+                <section>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3" style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body text-center shadow"><img id="my-avatar"
+                                        class="rounded-circle mb-3 mt-4" src="assets/img/avatar/avatar0.png" width="160"
+                                        height="160">
+                                    <div class="mb-3">
+                                        <div class="col">
+                                            <div class="mb-3"><label class="form-label" 
+                                                    for="username"><strong id=username>@username</strong></label></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><label class="form-label" 
+                                                    for="email"><strong id=email>user@example.com</strong></label></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><button id="promeni-avatar" class="btn btn-success btn-sm"
+                                                    type="submit">Sacuvaj Avatara &nbsp;<i
+                                                        class="fas fa-check"></i></button></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><label id="changed-avatar" class="form-label text-success"
+                                                    for="email"><strong>Avatar azuriran! <i
+                                                            class="fas fa-check"></i></strong></label></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><button id="izmeni-profil-btn"
+                                                    class="btn btn-primary btn-sm" type="submit">Izmeni profil &nbsp;<i
+                                                        class="fas fa-plus"></i></button></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><button id="promeni-sifru-btn"
+                                                    class="btn btn-primary btn-sm" type="submit">Promeni sifru &nbsp;<i
+                                                        class="fas fa-plus"></i></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="izmeni-profil">
+                                    <form id="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="ime-label"><label class="form-label" 
+                                                        for="first_name"><strong>Ime</strong><br></label><input
+                                                        class="form-control" type="text" id="first_name"
+                                                        placeholder="..." name="first_name"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3" id="prezime-label"><label class="form-label" 
+                                                        for="last_name"><strong>Prezime</strong><br></label><input
+                                                        class="form-control" type="text" id="last_name"
+                                                        placeholder="..." name="last_name"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="btn btn-primary btn-sm btn-success"  id= "potvrdiPromenuIP"> OK <i
+                                                        class="fas fa-check"></i></button>
+                                                <button id="cancel-izmeni-profil"
+                                                    class="btn btn-danger btn-sm btn-danger" type="submit"> <i
+                                                        class="fas fa-times"></i></button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="card-body" id="promeni-sifru">
+                                    <!-- <form id=""> -->
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-stara-sifra"><label class="form-label" 
+                                                        for="pasword"><strong>Stara sifra</strong><br></label><input
+                                                        class="form-control" type="text" id="oldpassword"
+                                                        placeholder="..." name="oldpassword"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-nova-sifra"><label class="form-label"
+                                                        for="first_name"><strong>Nova sifra</strong><br></label><input
+                                                        class="form-control" type="text" id="newPassword"
+                                                        placeholder="..." name="newPassword"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-ponovi-sifru"><label class="form-label"
+                                                        for="first_name"><strong>Ponovi sifru</strong><br></label><input
+                                                        class="form-control" type="text" id="repeatPassword"
+                                                        placeholder="..." name="repeatPassword"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3"><button class="btn btn-primary btn-sm" id="potvrdiPromenuSifre">Promeni
+                                                sifru</button> <button id="cancel-promeni-sifru"
+                                                class="btn btn-danger btn-sm" id ="otkaziPromenuSifre" ><i
+                                                    class="fas fa-times"></i></button></div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-3" style="background: rgba(255,255,255,0.85);">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 fw-bold" id="avatar-izbor">Izaberite vas avatar</p>
+                                        </div>
+                                        <div class="card shadow" style="background: rgba(255,255,255,0.85);">
+                                            <div class="card-body container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="carousel slide" data-bs-ride="carousel"
+                                                            id="carousel-1">
+                                                            <div class="carousel-inner container">
+                                                                <div class="carousel-item active row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar2.png"
+                                                                            alt="Dalmatinac"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar3.png"
+                                                                            alt="Husky"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar4.png"
+                                                                            alt="Maltese"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar5.png"
+                                                                            alt="Terrier"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar6.png"
+                                                                            alt="Pudla"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar1.png"
+                                                                            alt="Buldog"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar7.png"
+                                                                            alt="Pug"></button></div>
+                                                                <div class="carousel-item row"><button
+                                                                        class="btn btn-white avatar bg-transparent border-0 btn-custom"
+                                                                        type="button"><img class="rounded-circle"
+                                                                            src="assets/img/avatar/avatar8.png"
+                                                                            alt="Retriever"></button></div>
+                                                            </div>
+                                                            <div><a class="carousel-control-prev" href="#carousel-1"
+                                                                    role="button" data-bs-slide="prev"><span id="prev"
+                                                                        class="carousel-control-prev-icon"></span><span
+                                                                        class="visually-hidden">Previous</span></a><a
+                                                                    class="carousel-control-next" href="#carousel-1"
+                                                                    role="button" data-bs-slide="next"><span
+                                                                        class="carousel-control-next-icon"
+                                                                        id="next"></span><span
+                                                                        class="visually-hidden">Next</span></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav aria-label="">
+                                <ul class="pagination pagination-lg mb-0">
+                                    <li class="page-item">
+                                        <button id="moji-oglasi-btn" class="page-link btn btn-sm">MOJI OGLASI <i
+                                                class="fas fa-upload"></i></button>
+                                    </li>
+                                    <li class="page-item"><button id="sacuvani-objekti-btn"
+                                            class="page-link btn btn-sm">SACUVANO <i class="fas fa-heart"></i></button>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="moji-oglasi" class="card shadow mb-4" style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body">
+                                    <div id="novi-oglas-dugme" hidden="true"></div>
+                                    <section class="highlight-clean mt-2" style="background: rgba(255,255,255,0.85);">
+                                        
+                                        
+                                        <div class="container custom-background" id=sectionOglas>
+                                            <div class="container border b-radius p-3 bg-light mb-3" id="forma-novi-oglas" >
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3">
+                                                        <form class="form-horizontal needs-validation">
+                                                            <fieldset class="form-izmeni-oglas">
+                                        
+                                                                <!-- Form Name -->
+                                                                <legend class="nov">Izmeni oglas</legend>
+                                                                <!-- Select Basic -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-8 control-label ti1" for="selectbasic">Tip oglasa:</label>
+                                                                    <div class="col-md-9">
+                                                                        <select id="selectbasic" name="selectbasic" class="form-control">
+                                                                            <option value="filter_setanje"class="set">Šetanje</option>
+                                                                            <option value="filter_sisanje"class="sis">Šišanje</option>
+                                                                            <option value="filter_usvajanje"class="usv">Usvajanje</option>
+                                                                            <option value="filter_cuvanje"class="cuv">Čuvanje</option>
+                                                                            <option value="filter_parenje"class="par">Parenje</option>
+                                                                            <option value="filter_prodaja" class="pro">Prodaja</option>
+                                                                            <option value="filter_dresura" class="dre">Dresura</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                        
+                                        
+                                                                <!-- Text input-->
+                                                                <div class="form-group">
+                                                                    <label id="naslov-lab" class="col-md-9 control-label nasl" for="textinput">* Naslov Oglasa:</label>
+                                                                    <div class="col-md-9">
+                                                                        <input id="textinput" name="textinput" type="text" placeholder="Title"
+                                                                            class="form-control input-md">
+                                                                    </div>
+                                        
+                                        
+                                                                    <!-- Multiple Radios (inline) -->
+                                        
+                                                                    <label class="col-md-9 control-label hit1" for="radios">Hitan Oglas?</label>
+                                                                    <div class="col-md-9">
+                                                                        <label class="radio-inline y" for="radios-0">
+                                                                            <input type="radio" name="radios" id="radios-0" value="1">
+                                                                            Da
+                                                                        </label>
+                                                                        <label class="radio-inline n" for="radios-1">
+                                                                            <input type="radio" name="radios" id="radios-1" value="2" checked="checked">
+                                                                            Ne
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                        
+                                                                <!-- Textarea -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-9 control-label op" for="textarea">Opis:</label>
+                                                                    <div class="col-md-9">
+                                                                        <textarea class="form-control" id="textarea" name="textarea"
+                                                                            placeholder="..."></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- BrojTelefona -->
+                                                                <div class="form-group">
+                                                                    <label id="naslov-lab" class="col-md-8 control-label nasl" for="textinput">*Broj telefona:</label>
+                                                                    <div class="col-md-9">
+                                                                        <input id="textinputNumber" name="textinputNumber" type="text" placeholder="+043948355"
+                                                                            class="form-control input-md">
+                                                                    </div>
+                                                                <!-- Button (Double) -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-9 control-label" for="button1id"></label>
+                                                                    <div class="col-md-9">
+                                                                        <button id="button1id" type="submit" name="button1id" class="btn btn-success m-2"><i
+                                                                                class="fas fa-check"></i></button>
+                                                                        <button id="button2id" name="button2id" class="btn btn-danger m-2"><i
+                                                                                class="fas fa-times"></i></button>
+                                                                    </div>
+                                                                </div>
+                                        
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div id="load-oglas" class="alert container text-center alert-success" role="alert">
+                                                <div class="spinner-grow" role="status"></div> <span class="h5 ogpos"> Azuriranje oglasa... </span>
+                                            </div>
+                                            <div id="confirm-oglas" class="alert container text-center alert-success" role="alert">
+                                                <i class="fas fa-check"></i> <span class="h5 ogpos1"> Oglas uspesno azuriran! </span>
+                                            </div>
+                                            <div id="nacrtanoId"></div>
+                                           <!-- Mesto za cartice sa oglasima  -->
+
+                                           
+                                            <!-- ------------>
+                                        </div>
+                                             <div class="card-body text-center" id="ucitajjosOglasa">
+                                        <a href="#" id="refOgl" type= "" class="card-text">Ucitaj jos <i
+                                            class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                        
+                                       
+                                        
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div id="sacuvano-objekti" class="card shadow p-0"
+                                style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body">
+                                    <section class="highlight-clean" style="background: rgba(255,255,255,0.85);">
+                                        <div class="container custom-background" id = "sectionObjekti">
+                                            <div id="nacrtaniObjId"></div>
+                                              <!-- sekcija za objektee -->
+
+
+                                              <!--          ----------------           -->
+                                        </div>
+                                        <div class="card-body text-center" id="ucitajjosObj">
+                                    <a href="#" id="refObj" type= ""class="card-text">Ucitaj jos <i class="fas fa-arrow-right"></i></a>
+                               </div>
+                                    </div>
+                                    
+                                    </section>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="usl">Usluge</h3>
+                    <ul>
+                        <li><a href="saveti.html" class="sav redirekcija">Saveti</a></li>
+                        <li><a href="oglasi.html" class="ogl redirekcija">Oglasi</a></li>
+                        <li><a href="objekti.html" class="obj redirekcija">Objekti</a></li>
+						<li><a href="quiz.html" class="kvi redirekcija">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="onam">O nama</h3>
+                    <ul>
+                        <li><a data-bs-toggle="modal" href="#" data-bs-target="#teamRegex">Team Regex</a></li>
+                        <li><a href="#">Dogly</a></li>
+                        <li><a href="mailto:doglydogly7@gmail.com" class="konta">Kontaktirajte nas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Dogly</h3>
+                    <p class="opis1">Idealno mesto za vlasnike pasa koje kombinuje svakodnevne potrebe vašeg najboljeg prijatelja sa
+                        progresivnom web aplikacijom u modernom stilu - user-friendly interfjes, čini od korišćenja naše
+                        aplikacije
+                        jedan potpuni užitak!
+                    </p>
+                </div>
+                <div class="col item social">
+                    <a href="mailto:doglydogly7@gmail.com"><i class="icon ion-social-google"></i></a>
+                </div>
+                <p class="copyright">Regex&nbsp; © 2021</p>
+            </div>
+    </footer>
+
+    <!-- MODAL TEAM REGEX -->
+
+    <div class="modal fade" id="teamRegex" tabindex="-1" role="dialog" aria-labelledby="regexLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="staticBackdropLabel"
+                        class="text-uppercase text-letter-spacing-xs my-0 text-dark font-weight-bold">
+                        Team <code>REGEX</code> <i class="ion-ios-body pl-1 text-primary op-8 z-index-1 text-dark"></i>
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container py-7">
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_a.jpg" alt="Personal Trainer 1"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Anđela Kostić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Team Leader</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>Backend development i inženjer sistema i baze podataka aplikacije <code>Dogly.</code>
+                                </p>
+                                <a target="_blank" href="https://www.instagram.com/endzi_ko_/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i> </a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_k.jpg" alt="Personal Trainer 2"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Aleksa Krstić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>FrontEnd development aplikacije <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/krrle/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/aleksa-krstic-a95653215/"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="icon ion-social-linkedin h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_p.jpg" alt="Personal Trainer 3"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Petar Ranđelović
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>FrontEnd development i agile Trello board SCRUM master aplikacije <code>Dogly.</code>
+                                </p>
+                                <a target="_blank" href="https://www.linkedin.com/in/petar-randjelovic-3518511b4/"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="icon ion-social-linkedin h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_n.jpg" alt="Personal Trainer 4"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Nina Milenković
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Database Systems</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>Inženjer sistema i baze podataka za aplikaciju <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/ninaaaami/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/bootstrap1/js/bootstrap.min.js"></script>
+    
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/scripts/profile.js"></script>
+    <script src="assets/scripts/page-loader.js"></script>
+    <script src="assets/scripts/myprofile-interface.js"></script>
+     <script src="assets/scripts/new-form.js"></script> 
+    <script src="assets/js/lang/profil-lang.js"></script>
+    <script src="assets/js/lang/fut-lang.js"></script>
+    <script src="assets/js/lang/indus-lang.js"></script>
+    <script src= "assets/general.js"></script>
+    
+
+</body>
+
+</html>

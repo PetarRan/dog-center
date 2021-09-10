@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reset Password</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.css">
+    <link rel="stylesheet" href="assets/css/login-reg.css">
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image"
+                                    style="background-image: url(&quot;assets/img/dogs/forgot.png&quot;);"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4 welcomelang rss">Resetuj šifru</h4>
+                                    </div>
+                                    <form id="formica" class="user needs-validation" novalidate>
+
+
+                                       
+                                        <div class="form-group"><input
+                                                class="form-control form-control-user lozinkalang" type="password"
+                                                id="exampleInputPassword" placeholder="Šifra" name="password" required>
+                                            <div class="invalid-feedback infbpass istee">Šifre moraju biti iste</div>
+                                        </div>
+                                        <div class="form-group"><input
+                                            class="form-control form-control-user lozinkalangp" type="password"
+                                            id="exampleInputPasswordConf" placeholder="Ponovljena šifra" name="password" required>
+                                        <div id="invConf" class="invalid-feedback infbpass istee1">Šifre moraju biti iste</div>
+                                    </div>
+
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+
+                                            </div><button id="formicaDugme" class="btn btn-primary btn-block text-white btn-user loglang rss1"
+                                                ><i class="fas fa-user "></i>&nbsp; Resetuj šifru</button>
+                                            
+                                        </div>
+
+
+                                    </form>
+                                   
+
+                                        <div class="nav-item dropdown language">
+                                            <a class="nav-link  dropdown-toggle lglang" href="#"
+                                                data-bs-toggle="dropdown">
+                                                Jezik <i class="fas fa-language"></i> </a>
+                                            <ul class="dropdown-menu bg-primary li-items langWrap">
+                                                <li class="langWrapli  activee" language='srpski'><a
+                                                        class="dropdown-item text-white-50 sropt" href="#"><i
+                                                            class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+                                                <li class="langWrapli" language='english'><a
+                                                        class="dropdown-item text-white-50 enopt" href="#"><i
+                                                            class="flag-icon flag-icon-usa"></i> English</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="password-reset-confirm-modal" tabindex="-1" role="dialog" aria-labelledby="confirmLabel3" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header alert-success">
+                  <div>
+                      <h5 id="textModal"> <i class="fas fa-check"></i></h5>
+                  </div>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body alert-success text-center">
+                <a class="btn btn-success redirekcija" href="register.html">OK</a>
+            </div>
+        </div>
+      </div>
+	</div>
+
+    <div class="modal fade" id="password-reset-error-modal" tabindex="-1" role="dialog" aria-labelledby="confirmLabel4" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header alert-danger">
+                  <div>
+                      <h5> <i class="fas fa-times"></i></h5>
+                  </div>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body alert-danger text-center">
+                <a class="btn btn-danger redirekcija" href="register.html">Register</a>
+            </div>
+        </div>
+      </div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap1/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/forgotpass.js"></script>
+    <script src="assets/js/lang/forpassmalo.js"></script> 
+    <script src="assets/general.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+.divic{
+    width: 370px;
+}
+.img-fluid{
+    margin-top: 5px;
+}
+.custmod{
+    padding: 10%,20%,5%,5%;
+}

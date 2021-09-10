@@ -1,0 +1,59 @@
+.background-customsa{
+    background-image: url(/assets/img/dogly-banner-saveti.png);
+    background-size:contain;
+    min-width: 100px;
+    background-repeat: no-repeat;
+    padding:35vh;
+    background-position: center;
+    animation-name: fade-in;
+  animation-duration: 4s;
+  }
+
+  .background-customsa-en{
+    background-image: url(/assets/img/Slike\ -\ EN/dogly-banner-saveti-en.png);
+    background-size:contain;
+    min-width: 100px;
+    background-repeat: no-repeat;
+    padding:35vh;
+    background-position: center;
+    animation-name: fade-in;
+  animation-duration: 4s;
+  }
+
+  .dresura {
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .komande {
+    text-align: center;
+  }
+  
+  .eldresura {
+    text-align: center;
+  }
+  .rasa {
+    background-color: #70B340;
+    max-width: 450px;
+    border-radius: 40px;
+  }
+  .header.masthead{
+      background-color: white;
+  }
+ body{
+   background-image: url(/assets/img/dogly-saveti-bg.png);
+   background-position: top;
+   background-size: contain;
+ }
+
+.hover-div:hover  
+    {
+    opacity: .3;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    }

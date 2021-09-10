@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Objekti - Dogly</title>
+    <link rel="icon" href="assets/img/dogs/title-icon.png" type="image/icon type">
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/objekti-styles.css">
+    <link rel="stylesheet" href="assets/css/search-bar.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/comments.css">
+    <link rel="stylesheet" href="assets/css/glyphicons-custom-icons-rating.css">
+    <link rel="stylesheet" href="/assets/css/page-loader.css">
+</head>
+
+<body style="font-family: Catamaran;" >
+
+    <div id="loading">
+        <img id="loading-image" src="assets/img/dogly-loader.gif" alt="Loading..." />
+    </div>
+
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom fixed-top">
+        <div class="container"><a class="navbar-brand" href="index.html"><img width="130" height="30"
+                    src="assets/img/x.png"></img></a><button data-bs-toggle="collapse" class="navbar-toggler"
+                data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link proflang" href="javascript:void(0)"
+                            onclick="location.href='profile.html'">Moj Profil <i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link logoutlang" onclick="logout()" href="index.html">Odjavi me
+                            <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle servlang" href="#" data-bs-toggle="dropdown"> Usluge <i
+                                class="fas fa-plus"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items">
+                            <li><a class="dropdown-item text-white-50 savlang redirekcija" href="saveti.html"> <i
+                                        class="fas fa-hand-holding-heart icon"></i> Saveti </a></li>
+                            <li><a class="dropdown-item text-white-50 addlang redirekcija" href="oglasi.html"> <i
+                                        class="fa fa-bullhorn icon"></i>
+                                    Oglasi </a></li>
+                            <li><a class="dropdown-item text-white-50 objlang redirekcija" href="objekti.html"> <i
+                                        class="fas fa-building icon"></i>
+                                    Objekti </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle lglang" href="#" data-bs-toggle="dropdown"> Jezik <i
+                                class="fas fa-language"></i> </a>
+                        <ul class="dropdown-menu bg-dark li-items langWrap">
+                            <li class="langWrapli  activee" language='srpski'><a
+                                    class="dropdown-item text-white-50 sropt" href="#"><i
+                                        class="flag-icon flag-icon-srb"></i> Srpski</a></li>
+                            <li class="langWrapli " language='english'><a class="dropdown-item text-white-50 enopt"
+                                    href="#"><i class="flag-icon flag-icon-usa"></i> English</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center text-white masthead bg-custom">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto position-relative">
+                    <h1 class="mb-5 naslov1">Pregledajte lokalne objekte i servise za vas i vaseg psa!</h1>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                <select id="optgroup-choice" class="form-select form-control form-control-lg"
+                                    name="optgroup-choice">
+                                    <optgroup>
+                                        <option value="11" selected="" class="ve">Veterinar</option>
+                                        <option value="12" class="pe">PetShop</option>
+                                        <option value="13" class="ho">Hotel za Pse</option>
+                                        <option value="14" class="fri">Frizer za Pse</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <input type="button" id="search-button" class="btn btn-dark btn-lg dugmence"
+                                    value="Pretrazi..." />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--GOOGLE API-->
+    <section class="map-section">
+        <div class="map container" id="map-div">
+            <iframe allowfullscreen="" frameborder="0" loading="lazy" id="google-maps"
+                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCvXNHsk_YLBRyMVEyYGhyKqISLl84GpVQ&amp;q=nis+veterinar&amp;zoom=14"
+                width="100%" height="400"></iframe>
+        </div>
+        <h1 class="m-auto text-center header-map text-muted svena" style="font-family: Catamaran">Sve na jednom mestu!</h1>
+    </section>
+
+    <section>
+        <div class="card  banerveliki1"><img class="card-img-top w-100 d-block" src="assets/img/banner-search.png"></div>
+
+        <section id="Objects" class="bg-light p-1">
+            <!-- search -->
+            <hr>
+            <div class="container search-container">
+                <h1 class="heading what1">Znate šta tražite?</h1>
+                <div class="searchInputWrapper">
+                    <input class="searchInput" id="searchObjekti" type="text" placeholder='. . .'>
+                    <i class="searchInputIcon fa fa-search"></i>
+                    </input>
+                    <button type="button" id="sortDugme" class="btn btn-dark border rounded"><i
+                            class="fas fa-sort"></i></button>
+                </div>
+            </div>
+            <hr>
+
+            <!-- cards  -->
+
+            <ul id="objekti-list" class="listaobj">
+
+
+            </ul>
+
+        </section>
+
+    </section>
+
+    <section class="text-center bg-light features-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="far fa-hospital m-auto text-primary"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <h3 class="ve">Veterinar</h3>
+                        <p class="lead mb-0 veop">Selekcija profesionalnih veterinarskih ordinacija u vasoj okolini!</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-shopping-basket m-auto text-primary"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <h3 class="pe">PetShop</h3>
+                        <p class="lead mb-0 peop">Sve za vaseg psa i njegove potrebe!</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-hotel m-auto text-primary"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <h3 class="ho">Hoteli</h3>
+                        <p class="lead mb-0 hoop">Na putu ste? Pretrazite najbolje hotele za pse u vasem gradu!</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-cut m-auto text-primary"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <h3 class="fri">Frizer</h3>
+                        <div class="friop"><p class="lead mb-0">Neka vas pas uvek izgleda cisto i sredjeno! #fresh</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="col-xl-9 mx-auto position-relative pt-2 peokolina">
+        <h1 class="mb-2 p-2">Pet-Friendly Objekti na lokaciji <code class="h1">Nis</code> <i id='location-marker'
+                class="fas fa-map-marker"></i></h1>
+    </div>
+
+    <section class="text-center features-icons pet-friendly-cafe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card-style-custom mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon">
+                            <i class="fas fa-utensils m-auto text-dark" data-bss-hover-animate="pulse"></i>
+                        </div>
+                        <a class="link-primary text-decoration-none"
+                            href="https://www.google.com/maps/search/pleasure+cafe+nis/@43.3192094,21.9017834,16z/data=!3m1!4b1"
+                            target="_blank">
+                            <h3>Pleasure Cafe</h3>
+                        </a>
+                        <div class="icons"><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-style-custom mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-coffee m-auto text-dark"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <a class="link-primary text-decoration-none"
+                            href="https://www.google.com/maps/place/%D0%91%D0%B8%D1%80%D0%BE+%D0%9A%D0%B0%D1%84%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D1%98%D0%B0/@43.3176354,21.8955299,17z/data=!3m1!4b1!4m5!3m4!1s0x4755b0b0fdde8937:0xfbea554007a36b6a!8m2!3d43.3176315!4d21.8977186"
+                            target="_blank">
+                            <h3>Biro Kafeterija</h3>
+                        </a>
+                        <div class="icons"><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-style-custom mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-coffee m-auto text-dark"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <a class="link-primary text-decoration-none"
+                            href="https://www.google.com/maps/place/Komuna+Gastro+Bar/@43.3186614,21.8919311,17z/data=!3m1!4b1!4m5!3m4!1s0x4755b1893bc02889:0xe9688c4e81ac77c3!8m2!3d43.3186575!4d21.8941198"
+                            target="_blank">
+                            <h3>Komuna Cafe</h3>
+                        </a>
+                        <div class="icons"><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-style-custom mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-shopping-basket m-auto text-dark"
+                                data-bss-hover-animate="pulse"></i></div>
+                        <a class="link-primary text-decoration-none"
+                            href="https://www.google.com/maps/place/Delta+Planet+Nis/@43.3244957,21.9088275,17z/data=!3m1!4b1!4m5!3m4!1s0x4755b107fb8b053f:0xd89c1b9fc5b2de62!8m2!3d43.3244918!4d21.9110162"
+                            target="_blank">
+                            <h3>Delta Planet</h3>
+                        </a>
+                        <div class="icons"><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="usl">Usluge</h3>
+                    <ul>
+
+                        <li><a href="saveti.html" class="sav redirekcija">Saveti</a></li>
+                        <li><a href="oglasi.html" class="ogl redirekcija">Oglasi</a></li>
+                        <li><a href="objekti.html" class="obj redirekcija">Objekti</a></li>
+                        <li><a href="quiz.html" class="kvi redirekcija" data-bs-toggle="modal" href="#"
+                                data-bs-target="#quizModal">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 class="onam">O nama</h3>
+                    <ul>
+                        <li><a data-bs-toggle="modal" href="#" data-bs-target="#teamRegex">Team Regex</a></li>
+                        <li><a href="#">Dogly</a></li>
+                        <li><a href="mailto:doglydogly7@gmail.com" class="konta">Kontaktirajte nas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Dogly</h3>
+                    <p class="opis1">Idealno mesto za vlasnike pasa koje kombinuje svakodnevne potrebe vašeg najboljeg
+                        prijatelja sa
+                        progresivnom web aplikacijom u modernom stilu - user-friendly interfjes, čini od korišćenja naše
+                        aplikacije
+                        jedan potpuni užitak!
+                    </p>
+                </div>
+                <div class="col item social">
+                    <a href="mailto:doglydogly7@gmail.com"><i class="icon ion-social-google"></i></a>
+                </div>
+                <p class="copyright">Regex&nbsp; © 2021</p>
+            </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modcont">
+
+    </div>
+
+
+
+    <!-- MODAL TEAM REGEX -->
+
+    <div class="modal fade" id="teamRegex" tabindex="-1" role="dialog" aria-labelledby="regexLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="staticBackdropLabel"
+                        class="text-uppercase text-letter-spacing-xs my-0 text-dark font-weight-bold">
+                        Team <code>REGEX</code> <i class="ion-ios-body pl-1 text-primary op-8 z-index-1 text-dark"></i>
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container py-7">
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_a.jpg" alt="Personal Trainer 1"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Anđela Kostić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Team Leader</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>Backend development i inženjer sistema i baze podataka aplikacije <code>Dogly.</code>
+                                </p>
+                                <a target="_blank" href="https://www.instagram.com/endzi_ko_/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i> </a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_k.jpg" alt="Personal Trainer 2"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Aleksa Krstić
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>FrontEnd development aplikacije <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/krrle/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/aleksa-krstic-a95653215/"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="icon ion-social-linkedin h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 order-md-2 text-center">
+                                <img src="assets/img/avatar_p.jpg" alt="Personal Trainer 3"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Petar Ranđelović
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>FrontEndDev</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                                <p>FrontEnd development i agile Trello board SCRUM master aplikacije <code>Dogly.</code>
+                                </p>
+                                <a target="_blank" href="https://www.linkedin.com/in/petar-randjelovic-3518511b4/"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="icon ion-social-linkedin h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/avatar_n.jpg" alt="Personal Trainer 4"
+                                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                            </div>
+                            <div class="col-md-6 flex-valign text-center">
+                                <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                                    Nina Milenković
+                                </h3>
+                                <h5 class="my-0 font-weight-normal">
+                                    <em>Database Systems</em>
+                                </h5>
+                                <hr class="hr-primary w-70 ml-0 mb-3">
+                                <p>Inženjer sistema i baze podataka za aplikaciju <code>Dogly.</code></p>
+                                <a target="_blank" href="https://www.instagram.com/ninaaaami/?hl=en"
+                                    data-toggle="scroll-link" class="text-sm font-weight-bold"><i
+                                        class="ion-social-instagram h2 text-dark"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="favorites-confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header alert-success">
+                    <div>
+                        <h5 id=textmodal>Objekat sacuvan <i class="fas fa-check"></i></h5>
+                    </div>
+                    <button type="button" class="close btn btn-success" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="assets/bootstrap1/js/bootstrap.min.js"></script>  -->
+    <script src="assets/css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init2.js"></script>
+    <script src="assets/js/google-maps-script.js"></script>
+    <script src="assets/js/comments-function.js"></script>
+    <script src="assets/js/filter-sort.js"></script>
+    <script src="assets/js/search-objekti.js"></script>
+    <script src="assets/js/objekti.js"></script>
+    <script src="assets/js/recenzija-function.js"></script>
+    <script src="assets/js/oglasi.js"></script>
+    <script src="assets/scripts/page-loader.js"></script>
+    <script src="assets/js/lang/navbar-lang.js"></script>
+    <script src="assets/js/lang/obj-lang.js"></script>
+    <script src="assets/js/lang/fut-lang.js"></script>
+    <script src="assets/js/lang/indus-lang.js"></script>
+   
+    <script src="assets/general.js"></script>
+    
+</body>
+
+</html>

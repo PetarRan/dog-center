@@ -1,0 +1,9 @@
+.language{
+    margin-top: 2em;
+}
+
+.language a{
+    width: 150px;
+    border: solid steelblue;
+    border-radius: 1.2em;
+}
